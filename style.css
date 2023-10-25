@@ -1,0 +1,100 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 100vh;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.fan-container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    padding: 10px;
+    border-radius: 50%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid rgb(156, 156, 156);
+    z-index: 1;
+    background-color: rgb(186, 186, 186) !important;
+}
+.fan {
+    width: 200px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    animation-name: rotate;
+    position: relative;
+}
+.fan1 {
+    top: -35px;
+    left: 14px;
+    width: 100px;
+    height: 10px;
+    border-radius: 1rem;
+    transform: rotate(45deg);
+    background-color: rgb(46, 42, 42) !important;
+    position: absolute;
+}
+.fan2 {
+    top: 35px;
+    left: 14px;
+    width: 100px;
+    height: 10px;
+    border-radius: 1rem;
+    transform: rotate(-45deg);
+    background-color: rgb(46, 42, 42) !important;
+    position: absolute;
+}
+.fan3 {
+    left: 95px;
+    width: 100px;
+    height: 10px;
+    border-radius: 1rem;
+    background-color: rgb(46, 42, 42) !important;
+    position: absolute;
+}
+.center {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(110, 101, 101) !important;
+    position: absolute;
+}
+.buttons {
+    top: -4px;
+    width: 40px;
+    gap: 1rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(186, 186, 186) !important;
+}
+.button {
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    color: rgb(51, 48, 48) !important;
+    font-weight: bold;
+}
+.active {
+    border: 1px solid black !important;
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(90deg); }
+    100% { transform: rotate(180deg); }
+}
